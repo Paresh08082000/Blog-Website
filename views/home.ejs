@@ -1,0 +1,30 @@
+
+<%- include("partials/header"); -%>
+<div class="row">
+  <div class="Blog-div col-sm-6 col-md-4 col-lg-12">
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+  </div>
+</div>
+
+
+
+  <%  posts.forEach(function(post){ %>
+    <div class="row">
+      <div class="col-sm-6">
+      </div>
+      <div class="Blog-div col-sm-6 col-lg-12">
+        <h1><%=post.title%></h1>
+        <p>
+        <%=post.content.substring(0, 100) + " ..."%>
+        <a href="/posts/<%=post._id%>">Read More</a>
+        </p>
+      </div>
+    </div>
+
+    <% }) %>
+
+<div class="footer">
+        <p>🙂 Made by Paresh Brahmankar 🙂</p>
+</div>
+</body>
